@@ -18,8 +18,10 @@ import java.util.logging.Logger;
 @WebServlet(name = "APIServlet", value = "/api")
 public class APIController extends HttpServlet {
     // 의존성 주입, 싱글턴 패턴을 기반으로 한
-    final APIService apiService = APIService.getInstance();;
+    final APIService apiService = APIService.getInstance();
+    ;
     final Logger logger = Logger.getLogger(APIController.class.getName());
+
     @Override
     public void init() throws ServletException {
         logger.info("APIController init...");
